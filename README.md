@@ -26,7 +26,7 @@
 - **Backend**: Node.js (Express)
 - **Web3**: Stellar + Soroban akıllı kontrat
 - **Cüzdan**: Freighter eklentisi ile bağlantı
-- **Gerçek zamanlı veri**: Open-Meteo API (hava durumu)
+- **Gerçek zamanlı veri**: OpenWeatherMap API (hava durumu)
 - **Diğer**: GitHub Actions, Docker (isteğe bağlı)
 
 ---
@@ -87,6 +87,28 @@ cd ../frontend
 npm install
 npm run dev
 	•	Uygulama varsayılan olarak http://localhost:3000 adresinde çalışır.
+
+🌦️ API Anahtarı ve Gerçek/Hayali (Mock) Veri Kullanımı
+
+Gerçek Hava Durumu Verisiyle Çalışmak İçin
+	1.	OpenWeatherMap sitesinden ücretsiz bir API anahtarı alın.
+	2.	Proje kök dizininde (frontend klasöründe) .env.local dosyası oluşturun (veya var ise güncelleyin).
+	3.	İçine şu satırı ekleyin:    NEXT_PUBLIC_OPENWEATHER_API_KEY=a94...(Not: Kendi OpenWeather API anahtarınızı kullanmanız önerilir.)
+
+Mock (Test) Veri Kullanmak İçin
+
+Gerçek API kullanmak istemiyorsanız veya test için hazır veriyle çalışmak istiyorsanız:
+	1.	frontend/src/lib/config.js dosyasını açın.
+	2.	Aşağıdaki satırı bulun:
+export const USE_MOCK = false
+	3.	false değerini true yapın:
+export const USE_MOCK = true
+Böylece sistem, dışarıdan veri çekmeden demo/test ortamında çalışacaktır.
+
+
+
+
+ 
 
 
 
