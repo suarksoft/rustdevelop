@@ -79,8 +79,14 @@ node index.js             # veya: nodemon start
 ADMIN_SECRET=...
 CONTRACT_ID=...
 SOROBAN_RPC_URL=https://soroban-testnet.stellar.org:443
-SOROBAN_NETWORK_PASSPHRASE="Test SDF Network ; September 2015"
+SOROBAN_NETWORK_PASSPHRASE=Test SDF Network ; September 2015
 ADMIN_ALIAS=admin
+CONTRACT_ALIAS=token
+STELLAR_NETWORK=testnet
+
+
+
+
 
 ## Frontend’i Başlat
 cd ../frontend
@@ -136,7 +142,7 @@ Böylece sistem, dışarıdan veri çekmeden demo/test ortamında çalışacakt�
 
 
 👥 Ekip ve Katkıda Bulunanlar
-	•	Ahmet Buğra Kurnaz (Full Stack Developer)
+	•	Ahmet Buğra Kurnaz 
 
 
 
