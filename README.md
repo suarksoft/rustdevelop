@@ -1,6 +1,6 @@
 # AquaRunnel: Akıllı Tarım ve Ödül Platformu
 
-![AquaRunnel Logo](https://your-logo-link.com/logo.png)
+![AquaRunnel Logo]
 
 ---
 
@@ -27,7 +27,7 @@
 - **Web3**: Stellar + Soroban akıllı kontrat
 - **Cüzdan**: Freighter eklentisi ile bağlantı
 - **Gerçek zamanlı veri**: OpenWeatherMap API (hava durumu)
-- **Diğer**: GitHub Actions, Docker (isteğe bağlı)
+- **Diğer**: GitHub Actions
 
 ---
 
@@ -38,16 +38,13 @@ rustdevelop/
 ├── backend/               # ExpressJS - API ve blockchain entegrasyonu
 │   ├── index.js
 │   ├── mint-soroban.js
-│   └── …
+│   └──
 ├── frontend/              # Next.js - Kullanıcı arayüzü
 │   ├── app/
 │   ├── components/
 │   ├── lib/
 │   └── …
-├── stellar-contract/      # Soroban akıllı kontrat kaynak kodları (opsiyonel)
-│   └── …
-└── README.md
-
+├── stellar-contract/      
 
 
 
@@ -98,7 +95,7 @@ npm run dev
 
 Gerçek Hava Durumu Verisiyle Çalışmak İçin
 	1.	OpenWeatherMap sitesinden ücretsiz bir API anahtarı alın.
-	2.	Proje kök dizininde (frontend klasöründe) .env.local dosyası oluşturun (veya var ise güncelleyin).
+	2.	Proje kök dizininde (frontend klasöründe) .env.local dosyası oluşturun 
 	3.	İçine şu satırı ekleyin:    NEXT_PUBLIC_OPENWEATHER_API_KEY=a94...(Not: Kendi OpenWeather API anahtarınızı kullanmanız önerilir.)
 
 Mock (Test) Veri Kullanmak İçin
