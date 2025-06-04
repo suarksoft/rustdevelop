@@ -41,12 +41,13 @@ app.post("/api/mint-reward", async (req, res) => {
 
 
 app.post("/api/transfer", async (req, res) => {
-  const { fromWallet, toWallet, amount } = req.body;
-  if (!fromWallet || !toWallet || !amount) {
+  const { toWallet, amount } = req.body;
+  if (!toWallet || !amount) {
     return res.status(400).json({ success: false, error: "Eksik parametre" });
   }
   try {
-    const result = await transferTokens(fromWallet, toWallet, amount);
+    // amount'u integer'a çevirerek gönder!
+    const result = await transferTokens(toWallet, parseInt(amount, 10));
     res.json({ success: true, tx: result });
   } catch (err) {
     res.status(500).json({ success: false, error: err.message });

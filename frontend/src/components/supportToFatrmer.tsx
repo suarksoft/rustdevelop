@@ -44,7 +44,6 @@ export default function SupportFarmerPanel({ wallet, onNotification }: SupportFa
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          fromWallet: wallet,
           toWallet: recipient,
           amount: Number(amount),
         }),

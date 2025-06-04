@@ -4,12 +4,12 @@ dotenv.config();
 
 const CONTRACT_ID         = process.env.CONTRACT_ID;
 const ADMIN_ALIAS         = process.env.ADMIN_ALIAS || "admin";
+const ADMIN_PUBLIC_KEY    = process.env.ADMIN_PUBLIC_KEY; 
 const SOROBAN_RPC_URL     = process.env.SOROBAN_RPC_URL;
 const SOROBAN_NETWORK_PASSPHRASE = process.env.SOROBAN_NETWORK_PASSPHRASE;
 
-export async function transferTokens(fromWallet, toWallet, amount) {
+export async function transferTokens(toWallet, amount) {
   return new Promise((resolve, reject) => {
-    // Transfer admin üzerinden gerçekleşiyor!
     const cmd = [
       "stellar contract invoke",
       `--id ${CONTRACT_ID}`,
@@ -17,7 +17,7 @@ export async function transferTokens(fromWallet, toWallet, amount) {
       `--network-passphrase "${SOROBAN_NETWORK_PASSPHRASE}"`,
       `--rpc-url ${SOROBAN_RPC_URL}`,
       "-- transfer",
-      `--from ${fromWallet}`,
+      `--from ${ADMIN_PUBLIC_KEY}`,
       `--to ${toWallet}`,
       `--amount ${amount}`
     ].join(" ");

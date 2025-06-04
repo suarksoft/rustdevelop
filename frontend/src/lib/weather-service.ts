@@ -97,7 +97,7 @@ function mapWeatherCondition(condition: string): string {
     case "Haze":
       return "Sisli"
     default:
-      return condition // Diğer değerler için direkt yaz
+      return condition 
   }
 }
 
